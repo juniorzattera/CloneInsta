@@ -1,10 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:insta/controllers/CameraController.dart';
 import 'package:insta/screens/direct.dart';
 
 class FeedScreen extends StatefulWidget {
   @override
   _FeedScreen createState() => _FeedScreen();
 }
+
+CameraController camC = new CameraController();
 
 class _FeedScreen extends State<FeedScreen> {
   @override
@@ -18,7 +22,7 @@ class _FeedScreen extends State<FeedScreen> {
               size: 32.0,
               color: Colors.black,
             ),
-            onPressed: () {}),
+            onPressed: () => camC.tirarFoto()),
         title: Text('Instagram',
             style: TextStyle(
               fontFamily: 'Billabong',
